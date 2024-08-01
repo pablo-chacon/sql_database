@@ -108,7 +108,7 @@ JOIN
 JOIN 
     user u2 ON g2.user_id = u2.iduser
 WHERE 
-    haversine_distance(g1.latitude, g1.longitude, g2.latitude, g2.longitude) <= 1.0 -- Distance threshold in kilometers
+    haversine_distance(g1.latitude, g1.longitude, g2.latitude, g2.longitude) <= 0.15 -- Distance threshold in kilometers
     AND ABS(TIMESTAMPDIFF(SECOND, STR_TO_DATE(g1.time, '%Y-%m-%d %H:%i:%s'), STR_TO_DATE(g2.time, '%Y-%m-%d %H:%i:%s'))) <= 600;
 
 SET SQL_MODE=@OLD_SQL_MODE;
