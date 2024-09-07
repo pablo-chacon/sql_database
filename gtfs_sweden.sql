@@ -1,4 +1,4 @@
--- MySQL Script for GTFS Data
+-- MySQL Script for GTFS Data, not implemented and untested with current version
 
 USE `gtfs`;
 
